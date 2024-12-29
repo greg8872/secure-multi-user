@@ -5,9 +5,9 @@ NOTE: I'm still learning to make projects on GitHub (old dog learning new tricks
 
 This is just a preliminary experiment to allow data to be stored encrypted, but allow multiple users to use that data. 
 
-I would prefer this to include a hash that comes from the users password, however if a user needs to do forget password, we cannot regenerate keys for them with the new password as we don't have the old password to get the keys in the first place. Best I could do would be to have a "global" key store (similar to a user with a password), but this would require that password to be on the server as well, so in the end, I just went overboard with storing the keys with the user (or other table "type")
+I would prefer this to include a hash that comes from the users password, however if a user needs to do forget password, we cannot regenerate keys for them with the new password as we don't have the old password to get the keys in the first place. Best I could do would be to have a "global" key store (similar to a user with a password), but this would require that password to be on the server as well, so in the end, I just went overboard with storing the keys with the user (or other table defined in "use")
 
-We allow for multiple "types" as for the system that I was making this for allowed for people who are not yet users to submit data, so we can't store strictly off users (we have an "onboarding" table that is keyed off the users e-mail address)
+We allow for multiple "use" (table suffix) as for the system that I was making this for allowed for people who are not yet users to submit data, so we can't store strictly off users (we have an "onboarding" table that is keyed off the users e-mail address)
 
 This is NOT recomended to be used for any projects. This is EXPERIMENTAL ONLY. USE AT YOUR OWN RISK.
 
