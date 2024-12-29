@@ -70,10 +70,22 @@ public function storeData - Store the data
   extraUseIds, - (optional [default empty]) A list of other useIds who should have a key (ie, you have sub users), stored as (usetype)(useid), ex ['users343','onboarding22'] 
   revisions, - [true/false] Auto create revisions if storing to an existing value
   data, - the data to actuall store in RAW format.
+  RETURNS array of status: 
+  [
+    status: 'success' or 'error',  (if error, all other items are FALSE)
+    id: the id of the store
+    revision: the revision of this store
+    key: the radomly genreated key used for this store 
+  ]
 
 public function readData - Read a record 
   storeId, ID of the data to retrieve
   revision, optional revision # to get (for "history" of saves)
+  RETURNS array of status: 
+  [
+    status: 'success' or 'error',  (if error, all other items are FALSE)
+    data: the raw data that was originally encrypted
+  ]
    
 ===================================================================================
 
